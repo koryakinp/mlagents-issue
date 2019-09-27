@@ -1,6 +1,7 @@
 from mlagents.envs import UnityEnvironment
 
-env = UnityEnvironment(file_name="mldriver-discrete-steering", worker_id=1)
+env = UnityEnvironment(
+  file_name="environments/mldriver-discrete-steering", worker_id=1)
 
 brain_name = env.brain_names[0]
 

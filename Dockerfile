@@ -11,6 +11,8 @@ RUN apt-get install -y git
 
 RUN git clone https://github.com/koryakinp/mlagents-issue.git
 WORKDIR /mlagents-issue
+RUN mkdir environemnts
+RUN unzip env_Linux_x86_64.zip -d environments/
 
 RUN chmod 755 runner.sh
 ENTRYPOINT ["./runner.sh"]
